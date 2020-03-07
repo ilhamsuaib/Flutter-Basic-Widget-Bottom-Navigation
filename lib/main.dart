@@ -18,11 +18,12 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    final String _title = "Bottom Navigation";
     return MaterialApp(
-      title: "Home",
+      title: _title,
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
-        appBar: AppBar(title: Text("Bottom Navigation")),
+        appBar: AppBar(title: Text(_title)),
         body: _pageOptions[_selectedPage],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedPage,
